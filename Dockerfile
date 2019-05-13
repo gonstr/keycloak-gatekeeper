@@ -9,6 +9,7 @@ WORKDIR /build
 RUN CGO_ENABLED=0 GOOS=linux go build -o /opt/app
 
 FROM alpine
+RUN apk add --no-cache ca-certificates
 COPY --from=builder /opt/app /opt/app
 RUN addgroup -S app && adduser -S -G app app
 USER app
