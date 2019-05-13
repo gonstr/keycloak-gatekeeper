@@ -1,0 +1,28 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceRoot}",
+      "env": {},
+      "args": [
+        "--discovery-url=https://auth.fareoffice.com/auth/realms/prod",
+        "--client-id=infra-status",
+        "--client-secret=2ad8306b-2fbb-4b7e-9c0e-ffdce261be2f",
+        "--listen=:3011",
+        "--upstream-url=http://127.0.0.1:3010",
+        "--redirection-url=http://127.0.0.1:3011",
+        "--secure-cookie=false",
+        "--enable-refresh-tokens",
+        "--encryption-key=abfdjsieuthgnb50",
+        "--enable-logging=false"
+      ]
+    }
+  ]
+}
